@@ -1,0 +1,23 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# IDEs or Editors 
+.idea/
+.DS_Store
+
+# Optional: Ignore test coverage output
+coverage/
+
+# Optional: Ignore build output
+dist/
