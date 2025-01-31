@@ -4,7 +4,7 @@ import translate from "google-translate-api";
 
 const Languages = ["hi", "bn", "fr", "es"];
 
-export const createFAQ = async (req, res) => {
+const createFAQ = async (req, res) => {
   try {
     const { question, answer } = req.body;
     const translations = {};
@@ -23,7 +23,7 @@ export const createFAQ = async (req, res) => {
   }
 };
 
-export const getFAQs = async (req, res) => {
+const getFAQs = async (req, res) => {
   try {
     const { lang } = req.query;
     const cacheKey = `faqs_${lang || "en"}`;
@@ -47,3 +47,7 @@ export const getFAQs = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
+export {
+    createFAQ,
+    getFAQs
+}
